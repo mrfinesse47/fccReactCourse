@@ -33,7 +33,7 @@ const Book = () => {
 const Image = () => (
   <img
     src="https://images-na.ssl-images-amazon.com/images/I/81lsmyMcYNL._AC_UL200_SR200,200_.jpg"
-    alt="American Marxism"
+    alt="American Marxism 2"
   />
 );
 
