@@ -7,7 +7,7 @@ import "./index.css";
 
 function BookList() {
   return (
-    <section>
+    <section className="booklist">
       <Book />
       <Book />
       <Book />
@@ -21,24 +21,18 @@ function BookList() {
 }
 
 const Book = () => {
+  const title = "American Marxism";
+  const author = "Mark Levin";
   return (
-    <article>
-      <Image />
-      <Title />
-      <Author />
+    <article className="book">
+      <img
+        src="https://images-na.ssl-images-amazon.com/images/I/81lsmyMcYNL._AC_UL200_SR200,200_.jpg"
+        alt="American Marxism 2"
+      />
+      <h1>{title}</h1>
+      <h4>{author.toUpperCase()}</h4>
     </article>
   );
 };
-
-const Image = () => (
-  <img
-    src="https://images-na.ssl-images-amazon.com/images/I/81lsmyMcYNL._AC_UL200_SR200,200_.jpg"
-    alt="American Marxism 2"
-  />
-);
-
-const Title = () => <h1>American Marxism</h1>;
-
-const Author = () => <h4>Mark Levin</h4>;
 
 ReactDom.render(<BookList />, document.getElementById("root"));
